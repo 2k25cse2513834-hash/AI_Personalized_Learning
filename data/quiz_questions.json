@@ -1,0 +1,86 @@
+{
+  "OS": {
+    "Processes": [
+      {
+        "question": "Which scheduling algorithm gives each process a fixed time slice?",
+        "options": ["FCFS", "Round Robin", "SJF", "Priority"],
+        "answer": 1,
+        "explanation": "Round Robin gives every process a fixed time quantum in turn."
+      },
+      {
+        "question": "A process waiting for an I/O operation is in which state?",
+        "options": ["Running", "Ready", "Waiting", "Terminated"],
+        "answer": 2,
+        "explanation": "A process waiting for I/O is in the Waiting (Blocked) state."
+      },
+      {
+        "question": "Which structure stores information about a process?",
+        "options": ["Process Control Block", "Page Table", "File Allocation Table", "Inode"],
+        "answer": 0,
+        "explanation": "The PCB holds the process state, program counter and registers."
+      }
+    ],
+    "Memory": [
+      {
+        "question": "Paging eliminates which problem?",
+        "options": ["External fragmentation", "Deadlock", "Starvation", "Thrashing"],
+        "answer": 0,
+        "explanation": "Fixed-size pages remove external fragmentation, though internal fragmentation can remain."
+      },
+      {
+        "question": "Virtual memory is a technique that",
+        "options": ["Increases CPU speed", "Uses disk space to extend usable memory", "Deletes unused files", "Compresses RAM"],
+        "answer": 1,
+        "explanation": "Virtual memory uses secondary storage so programs can use more memory than the RAM available."
+      },
+      {
+        "question": "A page fault occurs when",
+        "options": ["The CPU overheats", "The page is not present in main memory", "The disk is full", "A process terminates"],
+        "answer": 1,
+        "explanation": "A page fault means the required page is not in RAM and must be loaded from disk."
+      }
+    ]
+  },
+  "Java": {
+    "OOP": [
+      {
+        "question": "Which keyword is used to inherit a class in Java?",
+        "options": ["extends", "implements", "inherits", "super"],
+        "answer": 0,
+        "explanation": "A class uses 'extends' to inherit another class."
+      },
+      {
+        "question": "Which concept allows the same method name with different parameters in one class?",
+        "options": ["Encapsulation", "Method overloading", "Abstraction", "Inheritance"],
+        "answer": 1,
+        "explanation": "Method overloading is compile-time polymorphism."
+      },
+      {
+        "question": "Which access modifier restricts a member to its own class only?",
+        "options": ["public", "protected", "private", "default"],
+        "answer": 2,
+        "explanation": "A private member is visible only inside its own class."
+      }
+    ],
+    "Collections": [
+      {
+        "question": "Which collection does not allow duplicate elements?",
+        "options": ["ArrayList", "LinkedList", "HashSet", "Vector"],
+        "answer": 2,
+        "explanation": "A Set stores only unique elements."
+      },
+      {
+        "question": "Which class implements a resizable array?",
+        "options": ["ArrayList", "HashMap", "TreeSet", "Stack"],
+        "answer": 0,
+        "explanation": "ArrayList is backed by a dynamically resizing array."
+      },
+      {
+        "question": "HashMap stores data as",
+        "options": ["Index and value", "Key-value pairs", "Sorted values only", "Rows and columns"],
+        "answer": 1,
+        "explanation": "HashMap stores entries as key-value pairs."
+      }
+    ]
+  }
+}
