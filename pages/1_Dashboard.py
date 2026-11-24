@@ -5,6 +5,7 @@ from database import get_connection
 from auth import require_login
 from ml.predict import predict_score
 from modules.weak_topics import get_topic_scores, WEAK_LIMIT
+from modules.alerts import get_alerts
 
 st.set_page_config(page_title="Dashboard", layout="wide")
 user = require_login()
@@ -61,5 +62,13 @@ else:
     weak_count = int((topic_df["latest"] < WEAK_LIMIT).sum())
 c6.metric("Weak topics", weak_count)
 
+alerts = get_alerts(user["student_id"])
+if alerts:
+    st.subheader("Alerts")
+    for level, msg in alerts:
+        if level == "warning":
+            st.warning(msg)
+        else:
+            st.info(msg)
 fig = px.bar(df, x="subject", y="marks", title="Subject-wise marks", range_y=[0, 100])
 st.plotly_chart(fig)
